@@ -9,5 +9,5 @@ public class TripApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TripApplication.class, args);
 	}
-
+	//bokyung
 }
