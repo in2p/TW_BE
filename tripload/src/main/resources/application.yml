@@ -1,0 +1,44 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssda
+    username: root
+    password: 6614
+
+jpa:
+  properties:
+    hibernate:
+      show_sql: true
+      format_sql: true
+  hibernate:
+    ddl-auto: create
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  level:
+    org:
+      springframework:
+        boot: DEBUG
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+
+servlet:
+  multipart:
+    maxFileSize: 20MB
+    maxRequestSize: 100MB
+
+
+
+jwt:
+  secret-key: GaXmsBiD6L1Z2M3NorAExZp8gr3uPXDR6J6iZxe4pfYKTf0SV1+I0xGqmuPG+nmLVCl9/2+lYB/VFI+AgoFGpg==
+
+oauth:
+  kakao:
+    client-id: 992ac8b159b158f4299b493df0509202
+    url:
+      auth: https://kauth.kakao.com
+      api: https://kapi.kakao.com
